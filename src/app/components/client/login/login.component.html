@@ -1,0 +1,16 @@
+<div class="login_wrapper">
+    <div class="left_details"> 
+        <a routerLink="/" class="login_logo"><img src="assets/images/logo.png" alt=""></a>      
+        <img src="assets/images/login_bg.jpg" class="lft_img" alt="">        
+    </div>
+    <div class="right_details">
+        <div class="main">
+            <h1>Log in</h1>
+            <button routerLink="/login-username" mat-flat-button color="custom-background-button">Login with Username & Password
+            </button>
+            <button routerLink="/login-seed-phrase" mat-stroked-button color="custom-strock-button">Login with Seed Phrase</button>
+            <p>Don't have an Account, <a href="">Register Here</a></p>
+        </div>
+    </div>
+    <app-login-footer></app-login-footer>
+</div>

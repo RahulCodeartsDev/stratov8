@@ -1,0 +1,63 @@
+<ng-container 
+*ngIf="router.url === '/'  || 
+router.url === '/history'  || 
+router.url === '/strato-partner-node-license'  || 
+router.url === '/strato-partner-nodes' ; then mainFooter ; else blankFooter"
+>
+</ng-container>
+<ng-template #mainFooter>
+    <footer class="custom-pad">
+        <div class="footer-shape-top">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+            <path class="footer-shape-fill" d="M500,97C126.7,96.3,0.8,19.8,0,0v100l1000,0V1C1000,19.4,873.3,97.8,500,97z">
+            </path>
+          </svg>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-10">
+              <div class="footer-logo">
+                <img src="assets/images/new-images/footer-logo.png" alt="">
+              </div>
+              <div class="footer-menu">
+                <ul class="footer-menu-list text-center">
+                  <li class="footer-menu-item">
+                    <a class="footer-menu-link" href="#">Home</a>
+                  </li>
+                  <li class="footer-menu-item">
+                    <a class="footer-menu-link"  href="#">Nodes</a>
+                  </li>
+                  <li class="footer-menu-item">
+                    <a  class="footer-menu-link" href="#">"Get strato" discord</a>
+                  </li>
+                  <li class="footer-menu-item">
+                    <a class="footer-menu-link"  href="#"> login</a>
+                  </li>
+                  <li class="footer-menu-item">
+                    <a  class="footer-menu-link" href="#">Signup</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-socials">
+                <ul class="header-socials-wrap text-center">
+                  <li class="header-social">
+                    <a href="#" class="header-social-icon"><span><i class="fab fa-facebook-f"></i></span></a>
+                  </li>
+                  <li class="header-social">
+                    <a href="#" class="header-social-icon"><span><i class="fab fa-twitter"></i></span></a>
+                  </li>
+                  <li class="header-social">
+                    <a href="#" class="header-social-icon"><span><i class="fab fa-linkedin-in"></i></span></a>
+                  </li>
+                  <li class="header-social">
+                    <a href="#" class="header-social-icon"><span><i class="fab fa-instagram"></i></span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+</ng-template>
+<ng-template #blankFooter></ng-template>
+

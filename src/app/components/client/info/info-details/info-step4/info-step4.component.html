@@ -1,0 +1,87 @@
+<div class="login-info-step">
+    <div class="login-info-step-wraper">
+        <app-side-panel></app-side-panel>
+        <div class="login-info-content">
+            <img id="logoImg" src="assets/images/logo-blue.png" alt="">
+            <div class="custom_button"><a routerLink="/info-step5">Next page</a></div>
+            <div class="step_4">
+                <div class="filter_back">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Select Date Range</mat-label>
+                        <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
+                            <input matStartDate formControlName="start" placeholder="Start date">
+                            <input matEndDate formControlName="end" placeholder="End date">
+                        </mat-date-range-input>
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-date-range-picker #picker></mat-date-range-picker>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Filter</mat-label>
+                        <mat-select [(ngModel)]="selectedValue" name="food">
+                            <mat-option *ngFor="let fill of fildata" [value]="fill.value">
+                                {{fill.viewValue}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <!-- <div class="cus_table" cdkDropList matSort (matSortChange)="sortData($event)" (cdkDropListDropped)="drop($event)"> -->
+                <div class="cus_table" cdkDropList (cdkDropListDropped)="drop($event)">
+                    <ul class="data_head">
+                        <!-- <li><input type="checkbox"></li>
+                        <li mat-sort-header="name">NAME</li>
+                        <li mat-sort-header="size">SIZE</li>
+                        <li mat-sort-header="type">TYPE</li>
+                        <li mat-sort-header="modified">MODIFIED</li>
+                        <li></li> -->
+                        <li>
+                            <mat-checkbox (click)="tableChecked()"></mat-checkbox>
+                        </li>
+                        <li>NAME</li>
+                        <li>SIZE</li>
+                        <li>TYPE</li>
+                        <li>MODIFIED</li>
+                        <li></li>
+                    </ul>
+
+                    <div class="scroll_section">
+                        <ul class="data_main" *ngFor="let data of filedata" cdkDrag>
+                            <li data-title="SELECT">
+
+                                <mat-checkbox [checked]="check"></mat-checkbox>
+                            </li>
+                            <li data-title="NAME"><img [src]=data.icon alt="">
+                                <p>{{data.name}}</p>
+                            </li>
+                            <li data-title="SIZE">{{data.size}}</li>
+                            <li data-title="TYPE">{{data.type}}</li>
+                            <li data-title="MODIFIED">{{data.modified | date: 'dd.MM.yyyy'}}</li>
+                            <li data-title="ACTION"><img src="assets/images/action.png" alt=""></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- <div cdkDropList matSort (matSortChange)="sortData($event)" class="example-list" (cdkDropListDropped)="drop($event)">
+                    <ul>
+                        <li mat-sort-header="name">NAME</li>
+                        <li mat-sort-header="size">SIZE</li>
+                        <li mat-sort-header="type">TYPE</li>
+                        <li mat-sort-header="modified">MODIFIED</li>
+                        <li></li>
+                    </ul>
+                    <ul class="example-box" *ngFor="let movie of movies" cdkDrag>
+                        <li>{{movie.name}}</li>
+                      <li>{{movie.size}}</li>
+                      <li>{{movie.type}}</li>
+                      <li>{{movie.modified | date: 'dd.MM.yyyy'}}</li>
+                    </ul>
+                  </div> -->
+            </div>
+            <div class="bottom-menu">
+                <img src="assets/images/settings-log.png" alt="">
+                <img src="assets/images/user-logo.png" alt="">
+                <img src="assets/images/switch-logo.png" alt="">
+            </div>
+
+        </div>
+    </div>
+</div>

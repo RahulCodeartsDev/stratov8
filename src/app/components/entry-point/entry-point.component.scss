@@ -1,0 +1,116 @@
+
+.login_wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    .left_details{
+        width: 55%;
+        height: 100%;
+        position: relative;
+        &::before{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(22,49,114,.9);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            content: '';
+        }
+       
+        img{
+            &.lft_img{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+            }
+        }
+    }
+    .right_details{
+        width: 45%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .main{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            .mat-custom-background-button{
+                width: 298px;
+                font-size: 12px;
+                font-weight: 700;
+                text-transform: uppercase;
+                height: 46px;
+                margin-bottom: 11px;
+            }
+            .mat-custom-strock-button {
+                width: 298px;
+                font-size: 12px;
+                font-weight: 700;
+                text-transform: uppercase;
+                height: 46px;
+                margin-bottom: 18px;
+            }
+            h1{
+                color: #1e293b;
+                font-size: 30px;
+                font-weight: 600;
+                margin-bottom: 38px;
+            }
+            p{
+                font-family: 'NTR', sans-serif;
+                color: var(--common-color);
+                font-size: 17px;
+                a{
+                    font-family: 'NTR', sans-serif;
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:750px){
+    .login_wrapper{
+        flex-direction: column;
+        height: 100vh;
+        .left_details{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .right_details{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            .main{
+                h1{
+                    color: var(--white-color);
+                }
+                .mat-custom-background-button{
+                    background-color: var(--white-color);
+                    color: var(--custom-button-color);
+                }
+                .mat-custom-strock-button {
+                    border-color: var(--white-color);
+                    color: var(--white-color);
+                }
+                p{
+                    color: var(--white-color);
+                    a{
+                        color: var(--white-color);
+                    }
+                }
+            }
+        }
+    }
+}

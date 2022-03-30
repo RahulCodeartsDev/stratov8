@@ -1,0 +1,31 @@
+.main_area{
+    width: 100%;
+    h2{
+        font-weight: 700;
+        color: #4a4a69;
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+        padding-top: 15px;
+        padding-bottom: 18px;
+    }
+}
+
+.network_details{
+    width: 100%;
+    display: grid;
+    padding-top: 8px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 36px;
+}
+
+@media only screen and (max-width:1279px){
+    .network_details{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width:991px){
+    .network_details{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

@@ -1,0 +1,40 @@
+
+<div class="login_wrapper">
+    <div class="left_details">
+        <a routerLink="/" class="login_logo"><img src="assets/images/logo.png" alt=""></a>
+        <img src="assets/images/node-avator.png" class="node_avator" alt="">
+        
+    </div>
+    <div class="right_details main_login">
+        <div class="main">
+            <h1>Sign in</h1>
+            <div class="main_form_back">
+                <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+                    <div class="input_back user">
+                        <input type="text" placeholder="Username" name="Username" id="Username" ngModel required #Username="ngModel">
+                        <span class="text-danger" *ngIf="!Username.valid && Username.touched">Please Fill Username</span>
+                    </div>
+                    <div class="input_back pass">
+                        <input type="password" name="Password" placeholder="Password" id="Password" ngModel required #Password="ngModel">
+                        <span class="text-danger" *ngIf="!Password.valid && Password.touched">Please Choose Password</span>
+                    </div>
+                    <div class="remember_area">
+                        <div class="checkbox_back">
+                            <input type="checkbox" name="remember" id="remember" ngModel>
+                            <label for="remember"><span></span>Remember me</label>                        
+                        </div>
+                        <a href="">Forgot Password</a>
+                    </div>
+                    <div class="button_submit_back">
+                        <button (click)="submit_form(Username, Password)" [disabled]="!myForm.valid" mat-stroked-button color="custom-background-button">Sign In</button>
+                        <button routerLink="/" mat-stroked-button color="custom-strock-button">REGISTER</button>
+                    </div>
+                </form>
+                
+                
+            </div>
+            <p>By signing up, you agree to our <a href="">Terms and Conditions</a> & <a href="">Privacy Policy</a></p>
+        </div>
+    </div>
+    <app-login-footer></app-login-footer>
+</div>

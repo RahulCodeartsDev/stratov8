@@ -1,0 +1,36 @@
+<div class="left_section">
+    <div class="humbarger" *ngIf="hum" (click)="ham_menu()">
+        <img src="assets/images/list.png" class="list" alt="">
+    </div>
+    <div class="details" [class.open]="open">
+        <a routerLink="/dashboard" class="logo"><img src="assets/images/logo.png" alt=""></a>
+        <img src="assets/images/close.png" class="cross" (click)="close_menu()" alt="">
+        <ul class="menu_details">
+            <li (click)="close_menu()">
+                <a routerLink="/dashboard" routerLinkActive="active">
+                    <img src="assets/images/d1.png" alt="">
+                    Dashboard
+                </a>
+            </li>
+            <li (click)="close_menu()">
+                <a routerLink="/network" routerLinkActive="active">
+                    <img src="assets/images/d2.png" alt="">
+                    Network
+                </a>
+            </li>
+            <li (click)="close_menu()">
+                <a routerLink="/hosting" routerLinkActive="active"> 
+                    <img src="assets/images/d3.png" alt="">
+                    Hosting
+                </a>
+            </li>
+            <li (click)="close_menu()">
+                <a>
+                    <img src="assets/images/d1.png" alt="">
+                    Dashboard
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+</div>

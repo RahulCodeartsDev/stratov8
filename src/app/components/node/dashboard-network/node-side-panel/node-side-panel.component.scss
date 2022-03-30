@@ -1,0 +1,162 @@
+.humbarger{
+    position: absolute;
+    top: 62px;
+    left: 35px;
+    cursor: pointer;
+}
+.left_section{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 267px;
+    z-index: 999;
+    overflow: hidden;
+    
+    
+    .details{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 267px;
+        height: 100%;
+        padding-top: 20px;
+       
+    }
+    .logo{
+        padding-left: 60px;
+        padding-bottom: 22px;
+        display: block;
+    }
+    .list{
+        display: none;
+    }
+    .cross{
+        display: none;
+        filter: brightness(0) invert(1);
+    }
+    .menu_details{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        li{
+            list-style: none;
+            width: 100%;
+            padding-left: 40px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            &:first-child{
+                border-bottom: #2e4886 1px solid;
+            }
+            &:last-child{
+                border-bottom: #2e4886 1px solid;
+            }
+            a{
+                width: 100%;
+                padding-left: 60px;
+                display: flex;
+                align-items: center;
+                padding: 14px 0 14px 20px;
+                color: #fff;
+                font-weight: 600;
+                font-size: 13px;
+                border-radius: 20px 0 0 20px;
+                position: relative;
+                &::before{
+                    width: 50px;
+                    height: 50px;
+                    // background-color: red;
+                    position: absolute;
+                    top: -50px;
+                    right: 0;
+                    content: "";
+                    border-radius: 50%;
+                    box-shadow: 35px 35px 0 10px #f1f5f9;
+                    opacity: 0;
+                }
+                &::after{
+                    width: 50px;
+                    height: 50px;
+                    // background-color: red;
+                    position: absolute;
+                    bottom: -50px;
+                    right: 0;
+                    content: "";
+                    border-radius: 50%;
+                    box-shadow: 35px -35px 0 10px #f1f5f9;
+                    opacity: 0;
+                }
+                
+                img{
+                    filter: brightness(0) invert(1);
+                    margin-right: 14px;
+                }
+                background-image: url(../../../../../assets/images/small_arrow_white.png);
+                background-repeat: no-repeat;
+                background-position: 78% center;
+                &:hover{
+                    background-color: #f1f5f9;
+                    color: #163172;
+                    img{
+                        filter: brightness(1) invert(0);
+                    }
+                    background-image: url(../../../../../assets/images/small_arrow.png);
+                    &::before{
+                        opacity: 1;
+                    }
+                    &::after{
+                        opacity: 1;
+                    }
+                }
+                &.active{
+                    background-color: #f1f5f9;
+                    color: #163172;
+                    img{
+                        filter: brightness(1) invert(0);
+                    }
+                    background-image: url(../../../../../assets/images/small_arrow.png);
+                    &::before{
+                        opacity: 1;
+                    }
+                    &::after{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:991px){
+    .left_section{
+        .details{
+            left: -120%;
+            z-index: 9999;
+            background-color: #163172;
+            transition: all .5s ease-in-out;
+            &.open{
+                left: 0;
+            }
+        }
+        .list{
+            display: block;
+        }
+        .cross{
+            display: block;
+            position: absolute;
+            top: 56px;
+            right: 45px;
+            z-index: 999;
+            cursor: pointer;
+        }
+        
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .humbarger{
+        top: 48px;
+    }
+  }
+  

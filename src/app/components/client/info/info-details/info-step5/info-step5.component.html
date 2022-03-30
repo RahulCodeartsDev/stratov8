@@ -1,0 +1,114 @@
+<div class="login-info-step">
+    <div class="login-info-step-wraper">
+        <app-side-panel></app-side-panel>
+        <div class="login-info-content">
+            <img id="logoImg" src="assets/images/logo-blue.png" alt="">
+            <div class="custom_button"><a routerLink="" >Next page</a></div>
+            <div class="main-container">
+                <section class="history">
+                    <div class="history-top-wraper">        
+                            <img class="history-image" src="../../../../../../assets/images/history-image.png"  alt="">
+                                  <div class="custom-heading-top">
+                                      <h4>18.4429 STRATO</h4>
+                                      <div class="convert-to-strato-btn">
+                                          <a (click)="formflag()" class="cs-button">Convert to STRATO[SC]</a>
+                                      </div>
+                                </div>                     
+                    </div>                   
+                        <div class="history-table">
+                                       <div class="history-list-wrap">
+                                           <ul class="history-list">
+                                               <li class="history-item">
+                                                  <div class="history-item-about">
+                                                      <img class="history-item-img" src="../../../../../../assets/images/clock.png" alt=""> 
+                                                   <span class="history-time">3 hours ago</span>
+                                                  </div>
+                                                   Icon Distribution Reward 105k STRATO [Strato Chain]
+                                               </li>
+                                               <li class="history-item">
+                                                  <div class="history-item-about">
+                                                      <img class="history-item-img" src="../../../../../../assets/images/clock.png" alt="">
+                                                   <span class="history-time">Yesterday</span>
+                                                  </div>
+                                                   Icon Distribution Reward 104k STRATO [Strato Chain]
+                                               </li>
+                                               <li class="history-item">
+                                                  <div class="history-item-about">
+                                                      <img class="history-item-img" src="../../../../../../assets/images/clock.png" alt="">
+                                                   <span class="history-time">2 days ago</span>
+                                                  </div>
+                                                   Icon Distribution Reward 106k STRATO [Strato Chain]
+                                               </li>
+                                               <li class="history-item">
+                                                  <div class="history-item-about">
+                                                      <img class="history-item-img" src="../../../../../../assets/images/clock.png" alt="">
+                                                   <span class="history-time">6 days ago</span>
+                                                  </div>
+                                                   Icon Distribution Reward 106k STRATO [Strato Chain]
+                                               </li>
+                                               <li class="history-item">
+                                                  <div class="history-item-about">
+                                                      <img class="history-item-img" src="../../../../../../assets/images/calendar.png" alt="">
+                                                   <span class="history-time">12/03/21</span>
+                                                  </div>
+                                                   Icon Distribution Reward 106k STRATO [Strato Chain]
+                                               </li>
+                                               <li class="history-item">
+                                                  <div class="history-item-about">
+                                                      <img class="history-item-img" src="../../../../../../assets/images/calendar.png" alt="">
+                                                   <span class="history-time">11/03/21</span>
+                                                  </div>
+                                                   Icon Distribution Reward 106k STRATO [Strato Chain]
+                                               </li>
+                                           </ul>
+                                       </div>
+                        </div>
+                </section> 
+                
+            </div>
+            <div class="bottom-menu">
+                <img src="assets/images/settings-log.png" alt="">
+                <img src="assets/images/user-logo.png" alt="">
+                <img src="assets/images/switch-logo.png" alt="">
+        </div>
+        </div>
+        
+    </div>
+    <div class="modal-wraper"  [class.formShow]="flag">
+      <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Convert to STRATO[SC]</h4>
+            <button type="button" class="close" (click)="formHide()" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form>
+            <div class="modal-body">        
+              <div class="form-group">
+                <label for="formGroupExampleInput">Amount</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+               
+              </div>
+              <div class="available-balance-content">
+                <p>Available Balance : <span class="available-balance"></span>324,330</p>
+                <button type="submit" class="btn">MAX</button>        
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="form-group">
+                <label>Gas Fee</label>
+              </div>
+              <div class="slider-range">
+                <input type="range" class="form-range" min="0" max="0.01" step="0.0011" id="customRange3"
+                  onchange="updateTextInput(this.value)">
+                <label for="customRange3" class="form-label"><span id="rangeValEth">0.0044</span> ETH (US $<span
+                    id="rangeValueUsd">23.42</span>)</label>
+                <span class="range-text-left">Slower</span>
+                <span class="range-text-right">Very Fast</span>
+              </div>        
+              <button type="button" class="cs-button">Convert</button>
+            </div>
+          </form>        
+        </div>
+  </div>
+</div>

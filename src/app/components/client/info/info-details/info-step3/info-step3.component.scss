@@ -1,0 +1,226 @@
+.login-info-step{
+    .login-info-step-wraper{
+        .login-info-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 120px 0;
+            .content-text{
+                position: unset;
+                p{
+                    font-size: 26px;
+                }
+                p:before{
+                    left: -8%;
+                }
+                p:after{
+                    right: -8%;
+                }
+            }
+            .content-upload{
+                text-align: center;
+                h4{
+                    font-size: 18px;
+                    color: #4a4a69;
+                    text-align: center;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    z-index: 10;
+                }
+                p{
+                    font-size: 20px;
+                    color: #787878;
+                    margin: 10px 0px 10px;;
+                }
+                p#content-text { 
+                    text-align: left;
+                }
+                #upload-button{
+                    background-color: #1e56a0;
+                    padding: 10px 272px 10px 272px;
+                    font-size: 17px;
+                    z-index: 10;
+                }
+                .content-upload-wraper{
+                    width: 597px;
+                    margin: 0 auto;
+                    .content-upload-area{
+                        height: 269px;
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        z-index: 10;
+                        padding: 0;
+                        background: #eff4f8;
+                        border: 1px solid #d6d6d6;
+                        border-style: dashed;
+                    }
+                    input[type='file']{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
+                    }
+                    input[type="file"] + label span.upload-box{
+                        width: 100%;
+                        height: 200px;
+                        p{
+                            font-size: 19px;
+                            color: #606060;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1600px){
+    .login-info-step{
+        .login-info-step-wraper{
+            .login-info-content{
+                padding: 13px 0 134px 0;
+                .content-upload{
+                    .content-upload-wraper{
+                        width: 520px;
+                        .content-upload-area{
+                            height: 220px;
+                        }
+                        #upload-button{
+                            padding: 10px 232px 10px 232px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1279px){
+    .login-info-step{
+        .login-info-step-wraper{
+            .login-info-content{
+                .content-upload{
+                    .content-upload-wraper{
+                        width: 488px;
+                        .content-upload-area{
+                            height: 163px;
+                        }
+                        p{
+                            font-size: 18px !important;
+                        }
+                        #upload-button{
+                            padding: 10px 214px 10px 213px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .login-info-step{
+        .login-info-step-wraper{
+            .login-info-content{
+                padding-top: 20px;
+                .content-text{
+                    p{
+                        font-size: 20px;
+                    }
+                }
+                .content-upload{
+                    .content-upload-wraper{
+                        width: 365px;
+                        .content-upload-area{
+                            height: 150px;
+                            label{
+                                .upload-box{
+                                    img{
+                                        width: 47px;
+                                        height: 38px;
+                                        margin-bottom: 9px;
+                                    }
+                                    p{
+                                        font-size: 16px;
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+                        #upload-button{
+                            padding: 8px 151px 8px 152px;
+                        }
+                        p{
+                            font-size: 16px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:767px){
+    .login-info-step{
+        .login-info-step-wraper{
+            .login-info-content{
+                padding-top: 70px;
+                .content-text{
+                    p{
+                        font-size: 15px;
+                    }
+                }
+                .content-upload{
+                    .content-upload-wraper{
+                        width: 270px;
+                        .content-upload-area{
+                            height: 130px;
+                            label{
+                                .upload-box{
+                                    img{
+                                        width: 32px;
+                                        height: auto !important;
+                                        margin-bottom: 8px;
+                                    }
+                                    p{
+                                        font-size: 14px;
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+                        #upload-button{
+                            padding: 4px 107px 4px 107px;
+                            font-size: 15px;
+                        }
+                        p{
+                            font-size: 13px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:500px){
+    .login-info-step{
+        .login-info-step-wraper{
+            .login-info-content{
+                .content-upload{
+                    h4{
+                        font-size: 16px;
+                        margin: 10px;
+                        z-index: 99;
+                        position: relative;
+                    }
+                    .content-upload-wraper{
+                        .content-upload-area{
+                            height: 113px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

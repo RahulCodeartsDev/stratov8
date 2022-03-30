@@ -1,0 +1,62 @@
+<div class="dashboard_network_details_back">
+    <app-node-side-panel></app-node-side-panel>
+    <div class="right_section_details">
+        <app-top-details></app-top-details>
+        <div class="main_area">
+            <h2>Dashboard</h2>
+            <ul class="cards_details">
+                <li *ngFor="let dash of dashboardItem">
+                    <div class="left">
+                        <div><img src="{{dash.icon}}" alt=""></div>
+                        <h3 [innerHTML] ="dash.title"></h3>                        
+                    </div>
+                    <div class="right">
+                        <img src="{{dash.avator}}" alt="">
+                        <p>{{dash.ava_msg}}</p>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="two_columns_details">
+                <div class="left">
+                    <h2>Updates</h2>
+                    <ul class="card">
+
+                        <li *ngFor="let update of updateItem" >
+                            <div class="icon">
+                                <img src="{{update.main_icon}}" alt="">
+                            </div>
+                            <div class="content">                                
+                                <h3>{{update.title}}</h3>
+                                <div class="clock">
+                                    <div><img src="assets/images/dashboard/clock.png" alt=""></div>
+                                    <p>{{update.time_text}}</p>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="right">
+                    <h2 class="center">Next Cycle Countdown :</h2>
+                    <countdown [config]="config" class="countdown_style"></countdown>
+                    
+                    <igx-pie-chart class="chart" height="70%" #legend
+                        width="100%"
+                        [dataSource]="data"
+                        [legend]="legend"
+                        valueMemberPath="Value"
+                        labelMemberPath="Label"
+                        labelsPosition="BestFit"
+                        brushes="#e94649, #f6b53f, #6faab0, #c4c24a, #fb954f, #005277, #8bc652"
+                        outlines="#fff, #fff, #fff"
+                        radiusFactor="1">
+                    </igx-pie-chart>
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

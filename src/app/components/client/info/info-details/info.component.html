@@ -1,0 +1,8 @@
+<div class="login-wraper">
+    <img src="assets/images/background1.png" alt="" class="backgroungImg1">
+    <img src="assets/images/background2.png" alt="" class="backgroundImg2">
+    <div class="login-wraper-content">
+        <h1>Welcome Back <span *ngIf="logedinUser">{{logedinUser | titlecase}}</span></h1>
+        <button mat-raised-button color="custom-background-button" routerLink="/info-step1">GET STARTED</button>
+    </div>
+</div>
