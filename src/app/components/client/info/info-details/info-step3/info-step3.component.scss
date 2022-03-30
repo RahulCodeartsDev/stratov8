@@ -26,6 +26,7 @@
                     font-weight: 600;
                     letter-spacing: 1px;
                     z-index: 10;
+                    margin-bottom: 15px;
                 }
                 p{
                     font-size: 20px;
@@ -81,7 +82,7 @@
     .login-info-step{
         .login-info-step-wraper{
             .login-info-content{
-                padding: 13px 0 134px 0;
+                padding: 116px 0 134px 0;
                 .content-upload{
                     .content-upload-wraper{
                         width: 520px;
@@ -109,6 +110,7 @@
                         }
                         p{
                             font-size: 18px !important;
+                            line-height: 15px;
                         }
                         #upload-button{
                             padding: 10px 214px 10px 213px;
@@ -154,6 +156,7 @@
                         }
                         p{
                             font-size: 16px !important;
+                            line-height: 22px;
                         }
                     }
                 }
@@ -165,7 +168,7 @@
     .login-info-step{
         .login-info-step-wraper{
             .login-info-content{
-                padding-top: 70px;
+                padding-top: 90px;
                 .content-text{
                     p{
                         font-size: 15px;
@@ -196,6 +199,7 @@
                         }
                         p{
                             font-size: 13px !important;
+                            line-height: 19px;
                         }
                     }
                 }

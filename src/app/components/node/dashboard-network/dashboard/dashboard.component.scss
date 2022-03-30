@@ -11,6 +11,7 @@
     }
 }
 
+
 .two_columns_details{
     width: 100%;
     display: grid;
@@ -116,6 +117,15 @@
        
     }
 }
+@media only screen and (max-width:1500px){
+    .left{
+        button{
+            font-size: 10px;
+            line-height: 32px;
+        }
+    }
+}
+
 
 @media only screen and (max-width: 1023px){
     .two_columns_details{

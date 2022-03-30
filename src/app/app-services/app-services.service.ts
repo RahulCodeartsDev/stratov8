@@ -13,25 +13,33 @@ export class AppServicesService {
       "icon": "assets/images/dashboard/da-icon1.png",
       "title": "Daily<br /><span class='small_font'>Progress</span>",
       "avator": "assets/images/dashboard/da-ava1.png",
-      "ava_msg": ""
+      "ava_msg": "",
+      "button_text":"",
+      "button_url":""
     },
     {
       "icon": "assets/images/dashboard/da-icon2.png",
       "title": "Partner<br /><span class='small_font'>Nodes Online</span>",
       "avator": "assets/images/dashboard/da-ava2.png",
-      "ava_msg": "8500+"
+      "ava_msg": "8500+",
+      "button_text":"",
+      "button_url":""
     },
     {
       "icon": "assets/images/dashboard/da-icon3.png",
       "title": "Purchased<br /><span class='small_font'>Licences</span>",
       "avator": "assets/images/dashboard/da-ava3.png",
-      "ava_msg": "10101010- 10aa-a1b0"
+      "ava_msg": "10101010- 10aa-a1b0",
+      "button_text":"Buy Licence",
+      "button_url":"/strato-partner-nodes"
     },
     {
       "icon": "assets/images/dashboard/da-icon4.png",
       "title": "Active<br /><span class='small_font'>Nodes</span>",
       "avator": "assets/images/dashboard/da-ava4.png",
-      "ava_msg": "14879 Nodes"
+      "ava_msg": "14879 Nodes",
+      "button_text":"",
+      "button_url":""
     }
   ];
 
@@ -172,6 +180,8 @@ export class AppServicesService {
   ];
 
   logedinUserResponse = new BehaviorSubject(false)
+
+  loginButtons = new BehaviorSubject(true)
 
 
 

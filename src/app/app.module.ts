@@ -57,6 +57,14 @@ import { SidePanelComponent } from './components/client/info/side-panel/side-pan
 import { SettingsComponent } from './components/node/dashboard-network/hosting/settings/settings.component';
 import { NodeSidePanelComponent } from './components/node/dashboard-network/node-side-panel/node-side-panel.component';
 import { HomeComponent } from './components/home/home.component';
+import { HeroComponent } from './components/home/hero/hero.component';
+import { CloudStorageComponent } from './components/home/cloud-storage/cloud-storage.component';
+import { PartnerNodesComponent } from './components/home/partner-nodes/partner-nodes.component';
+import { HistoryComponent } from './components/history/history.component';
+import { HistoryTopWraperComponent } from './components/history/history-top-wraper/history-top-wraper.component';
+import { HistoryTableComponent } from './components/history/history-table/history-table.component';
+import { StratoPartnerNodesComponent } from './components/strato-partner-nodes/strato-partner-nodes.component';
+import { StratoPartnerNodesLicenseComponent } from './components/strato-partner-nodes-license/strato-partner-nodes-license.component';
 
 
 
@@ -97,7 +105,15 @@ import { HomeComponent } from './components/home/home.component';
     SettingsComponent,
     InfoStep5Component,
     NodeSidePanelComponent,
-    HomeComponent
+    HomeComponent,
+    HeroComponent,
+    CloudStorageComponent,
+    PartnerNodesComponent,
+    HistoryComponent,
+    HistoryTopWraperComponent,
+    HistoryTableComponent,
+    StratoPartnerNodesComponent,
+    StratoPartnerNodesLicenseComponent
   ],
   imports: [
     BrowserModule,

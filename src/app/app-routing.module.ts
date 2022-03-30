@@ -13,11 +13,14 @@ import { LoginUsernameComponent } from './components/client/login/login-username
 
 import { LoginComponent } from './components/client/login/login.component';
 import { EntryPointComponent } from './components/entry-point/entry-point.component';
+import { HistoryComponent } from './components/history/history.component';
 import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/node/dashboard-network/dashboard/dashboard.component';
 import { HostingComponent } from './components/node/dashboard-network/hosting/hosting.component';
 import { NetworkComponent } from './components/node/dashboard-network/network/network.component';
 import { NodeLoginComponent } from './components/node/node-login/node-login.component';
+import { StratoPartnerNodesLicenseComponent } from './components/strato-partner-nodes-license/strato-partner-nodes-license.component';
+import { StratoPartnerNodesComponent } from './components/strato-partner-nodes/strato-partner-nodes.component';
 
 
 import { WildcardComponent } from './components/wildcard/wildcard.component';
@@ -27,6 +30,21 @@ const routes: Routes = [
   
   {
     path: "", component: HomeComponent
+  },
+  {
+    path: "home", component: HomeComponent
+  },
+  {
+    path: "history", component: HistoryComponent
+  },
+  {
+    path: "strato-partner-nodes", component: StratoPartnerNodesComponent
+  },
+  {
+    path: "strato-partner-nodes-license", component: StratoPartnerNodesLicenseComponent
+  },
+  {
+    path: "entry-point", component: EntryPointComponent
   },
   {
     path: "client-login", component: LoginComponent

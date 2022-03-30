@@ -27,35 +27,48 @@ router.url === '/login-seed-phrase' ; then loginHeader ; else infoHeader"
 <ng-container 
 *ngIf="router.url === '/'  || 
 router.url === '/history'  || 
-router.url === '/strato-partner-node-license'  || 
+router.url === '/strato-partner-nodes-license'  || 
 router.url === '/strato-partner-nodes' ; then mainHeader ; else blankHeader"
 >
 </ng-container>
+
+
 <ng-template #mainHeader>
     <header class="custom-header">
         <div class="container">
           <div class="row">
             <div class="col-lg-8 align-self-center">
               <nav class="navbar navbar-expand-lg"> 
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" routerLink="/">
                   <img src="assets/images/new-images/logo.png" alt="">
                 </a>
-                <ul class="header-button-wrap header-button-wrap-for-mobile">
-                  <li class="header-btn">
-                    <a href="#" class="btn custom-btn custom-btn-fill">Login</a>
-                  </li>
-                  <li class="header-btn">
-                    <a href="#" class="btn custom-btn custom-btn-outline">Sign Up</a>
-                  </li>
-                </ul>
+                <ng-container *ngIf="login_buttons">
+                  <ul class="header-button-wrap header-button-wrap-for-mobile">
+                    <li class="header-btn">
+                      <a routerLink="/entry-point" class="btn custom-btn custom-btn-fill">Login</a>
+                    </li>
+                    <li class="header-btn">
+                      <a href="#" class="btn custom-btn custom-btn-outline">Sign Up</a>
+                    </li>
+                  </ul>
+                </ng-container>
+                <ng-container *ngIf="!login_buttons">
+                  <ul class="header-button-wrap header-button-wrap-for-mobile">
+                    <li class="header-btn">
+                      <a routerLink="/dashboard" class="btn custom-btn custom-btn-fill">Dashboard</a>
+                    </li>
+                    
+                  </ul>
+                </ng-container>
+               
                 <div class="navbar-header">
-                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                  <button type="button" (click)="menuFlag()" class="navbar-toggle collapsed" [class.collapsed]="btnFlag" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                 </div>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent"  [class.show]="flag">
                   <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"> <a class="nav-link" href="index.html">Home</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="strato-partner-nodes.html">Nodes</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#">"Get STRATO" Discord</a> </li>
+                    <li class="nav-item active"> <a class="nav-link" routerLink="/">Home</a> </li>
+                    <li class="nav-item"> <a class="nav-link" routerLink="/history">Nodes</a> </li>
+                    <li class="nav-item"> <a class="nav-link" routerLink="/">"Get STRATO" Discord</a> </li>
                   </ul>
             
                     <!-- <li class="nav-item"> <a class="nav-link" href="#">Login</a> </li>
@@ -68,14 +81,25 @@ router.url === '/strato-partner-nodes' ; then mainHeader ; else blankHeader"
             </div>
             <div class="col-lg-4 align-self-center">
               <div class="header-right"> 
-                      <ul class="header-button-wrap">
-                        <li class="header-btn">
-                          <a href="#" class="btn custom-btn custom-btn-fill">Login</a>
-                        </li>
-                        <li class="header-btn">
-                          <a href="#" class="btn custom-btn custom-btn-outline">Sign Up</a>
-                        </li>
-                      </ul>
+                      <ng-container *ngIf="login_buttons">
+                        <ul class="header-button-wrap">
+                          <li class="header-btn">
+                            <a routerLink="/entry-point" class="btn custom-btn custom-btn-fill">Login</a>
+                          </li>
+                          <li class="header-btn">
+                            <a routerLink="/" class="btn custom-btn custom-btn-outline">Sign Up</a>
+                          </li>
+                        </ul>
+                      </ng-container>
+                      <ng-container *ngIf="!login_buttons">
+                        <ul class="header-button-wrap">
+                          <li class="header-btn">
+                            <a routerLink="/dashboard" class="btn custom-btn custom-btn-fill">Dashboard</a>
+                          </li>
+                          
+                        </ul>
+                      </ng-container>
+                      
                     <ul class="header-socials-wrap">
                       <li class="header-social">
                         <a href="#" class="header-social-icon"><span><i class="fab fa-facebook-f"></i></span></a>

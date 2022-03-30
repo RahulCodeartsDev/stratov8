@@ -8,7 +8,10 @@
                 <li *ngFor="let dash of dashboardItem">
                     <div class="left">
                         <div><img src="{{dash.icon}}" alt=""></div>
-                        <h3 [innerHTML] ="dash.title"></h3>                        
+                        <h3 [innerHTML] ="dash.title"></h3>
+                        <button routerLink={{dash.button_url}} mat-flat-button color="custom-background-button">{{dash.button_text}}
+                        </button>
+                        <!-- <a routerLink="{{dash.button_url}}">{{dash.button_text}}</a>             -->
                     </div>
                     <div class="right">
                         <img src="{{dash.avator}}" alt="">

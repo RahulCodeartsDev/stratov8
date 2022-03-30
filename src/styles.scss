@@ -624,6 +624,7 @@ header{
            background: #eef3f7; /* Old browsers */
            background: -moz-linear-gradient(left,  #eef3f7 0%, #f9fbfc 100%); /* FF3.6-15 */
            background: -webkit-linear-gradient(left,  #eef3f7 0%,#f9fbfc 100%); /* Chrome10-25,Safari5.1-6 */
+           overflow: hidden;
            background: linear-gradient(to right,  #eef3f7 0%,#f9fbfc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eef3f7', endColorstr='#f9fbfc',GradientType=1 ); /* IE6-9 */
            #logoImg{

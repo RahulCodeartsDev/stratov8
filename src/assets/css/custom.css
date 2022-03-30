@@ -203,6 +203,7 @@ color: var(--lighter-blue);
   }
   .header-button-wrap .header-btn, .header-socials-wrap .header-social {
 	display: inline-block;
+	margin-right: 3px;
   }
   .header-right .header-socials-wrap {
 	width: 40%;
@@ -1265,15 +1266,16 @@ input[type=range]:focus::-ms-fill-upper {
 	background-image: url(../images/tokensale.svg);
 	background-repeat: no-repeat;
 	background-position: left center;
-	background: rgb(255,255,255);
-background: linear-gradient(188deg, rgba(255,255,255,1) 0%, rgba(244,249,252,1) 52%, rgba(0,212,255,1) 100%);
 	padding-bottom: 100px;
+	padding-top: 50px;
+	background: rgb(255,255,255);
+    background: linear-gradient(188deg, rgba(255,255,255,1) 0%, rgba(244,249,252,1) 57%, rgba(0,212,255,1) 100%);
 }
 .history-table{
 	background-repeat: no-repeat;
 	background-position: left center;
 	background: rgb(255,255,255);
-background: linear-gradient(351deg, rgba(255,255,255,1) 0%, rgba(244,249,252,1) 52%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(351deg, rgba(255,255,255,1) 0%, rgba(244,249,252,1) 61%, rgba(0,212,255,1) 100%);
 }
 /*26-03-22 ends */
 
